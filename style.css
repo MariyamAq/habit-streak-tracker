@@ -1,55 +1,105 @@
-body {
-    background: #f0f4f8; /* Soft background */
-    font-family: 'Segoe UI', sans-serif;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
+body{
+    margin:0;
+    font-family:Segoe UI,sans-serif;
+    background:#f0f4f8;
+    display:flex;
+    justify-content:center;
+    padding:40px 10px;
 }
 
-.container {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 25px; /* Very rounded corners */
-    box-shadow: 10px 10px 20px #d1d9e6, -10px -10px 20px #ffffff;
-    width: 350px;
+.container{
+    width:min(700px,95%);
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
-h1 { color: #6c63ff; text-align: center; }
-
-input {
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    background: #f0f4f8;
-    width: 70%;
+h1{
+    text-align:center;
+    color:#6c63ff;
 }
 
-button {
-    background: #6c63ff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 days per row */
-    gap: 5px;
-    margin-top: 20px;
+.input-group{
+    display:flex;
+    gap:10px;
+    margin:20px 0;
 }
 
-.day-box {
-    width: 30px;
-    height: 30px;
-    background: #f0f4f8;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.3s;
+input{
+    flex:1;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    font-size:16px;
 }
 
-.day-box:hover { background: #6c63ff; color: white; }
+button{
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#6c63ff;
+    color:white;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#534ad8;
+}
+
+.habit-card{
+    background:#fafafa;
+    margin-top:20px;
+    padding:15px;
+    border-radius:15px;
+    border:1px solid #eee;
+}
+
+.habit-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.calendar{
+    margin-top:15px;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:8px;
+}
+
+.day{
+    height:45px;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e9edf2;
+    cursor:pointer;
+    transition:.3s;
+    user-select:none;
+}
+
+.day:hover{
+    background:#d8d8ff;
+}
+
+.completed{
+    background:#6c63ff;
+    color:white;
+}
+
+.delete-btn{
+    background:#ff4d4d;
+}
+
+.delete-btn:hover{
+    background:#d63d3d;
+}
+
+.streak{
+    margin-top:10px;
+    font-weight:bold;
+    color:#444;
+}
