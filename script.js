@@ -22,3 +22,14 @@ function render() {
     });
 }
 render();
+function createCalendar() {
+    const calendar = document.getElementById('calendar');
+    for (let i = 1; i <= 30; i++) {
+        const day = document.createElement('div');
+        day.classList.add('day-box');
+        day.innerText = i;
+        day.onclick = () => day.style.background = '#6c63ff'; // Mark day as active
+        calendar.appendChild(day);
+    }
+}
+createCalendar();
