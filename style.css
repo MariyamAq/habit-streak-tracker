@@ -32,3 +32,24 @@ button {
     border-radius: 10px;
     cursor: pointer;
 }
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 days per row */
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.day-box {
+    width: 30px;
+    height: 30px;
+    background: #f0f4f8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.day-box:hover { background: #6c63ff; color: white; }
